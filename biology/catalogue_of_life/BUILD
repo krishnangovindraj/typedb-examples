@@ -22,7 +22,7 @@
 java_binary(
     name = "loader",
     main_class = "com.vaticle.typedb.example.biology.catalogueOfLife.Loader",
-    srcs = ["Loader.java"],
+    srcs = ["src/Loader.java"],
     deps = [
         "@maven//:com_univocity_univocity_parsers",
         "@maven//:info_picocli_picocli",

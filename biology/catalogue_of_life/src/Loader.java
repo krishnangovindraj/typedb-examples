@@ -231,7 +231,7 @@ public class Loader {
     }
 
     public static void extractSchema(Path dataDirectory) throws IOException {
-        InputStream schema = Loader.class.getResourceAsStream("/biology/catalogue_of_life/schema.tql");
+        InputStream schema = Loader.class.getResourceAsStream("/schema.tql");
         if (schema == null) throw new FileNotFoundException("schema.tql not found within the jar!");
         Files.copy(schema, dataDirectory.resolve("schema.tql"), StandardCopyOption.REPLACE_EXISTING);
     }
@@ -240,7 +240,7 @@ public class Loader {
         Path config = dataDirectory.resolve("loader-config.json");
 
         try (FileWriter configWriter = new FileWriter(config.toFile())) {
-            InputStream template = Loader.class.getResourceAsStream("/biology/catalogue_of_life/loader-config.json.template");
+            InputStream template = Loader.class.getResourceAsStream("/loader-config.json.template");
             if (template == null) throw new FileNotFoundException("loader-config.json.template not found within the jar!");
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(template));

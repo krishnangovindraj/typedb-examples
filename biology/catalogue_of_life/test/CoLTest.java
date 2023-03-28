@@ -50,7 +50,7 @@ public class CoLTest {
 
     @BeforeClass
     public static void loadTestData() throws IOException {
-        Path dataDirectory = Path.of("biology/catalogue_of_life/test/data");
+        Path dataDirectory = Path.of("data");
         Loader.prepareData(dataDirectory);
         Loader.loadData(dataDirectory, Loader.parseCLIOptions(new String[]{}).get());
 
