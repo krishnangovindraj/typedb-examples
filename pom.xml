@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.vaticle.typedb.example</groupId>
+    <artifactId>examples-all</artifactId>
+    <version>2.16.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- https://maven.apache.org/general.html#encoding-warning -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- typedb dependency versions -->
+        <typedb.client.version>2.16.1</typedb.client.version>
+    </properties>
+
+    <modules>
+        <module>biology/catalogue_of_life</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>repo.vaticle.com</id>
+            <url>https://repo.vaticle.com/repository/maven/</url>
+        </repository>
+        <repository>
+            <id>repo.vaticle.com_osi-maven</id>
+            <url>https://repo.vaticle.com/repository/osi-maven/</url>
+        </repository>
+    </repositories>
+
+</project>
