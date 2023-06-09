@@ -54,6 +54,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+import com.vaticle.typedb.example.software.github.state.Downloader
+import com.vaticle.typedb.example.software.github.state.GlobalState
+import com.vaticle.typedb.example.software.github.state.Migrator
+
+
 object GitApplication {
     private val coroutineScope = CoroutineScope(Dispatchers.Default)
 

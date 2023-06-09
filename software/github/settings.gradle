@@ -9,3 +9,4 @@
 
 rootProject.name = 'github'
 include('state')
+include('view')

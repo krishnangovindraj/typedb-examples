@@ -9,9 +9,10 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id 'org.jetbrains.kotlin.jvm' version '1.8.10'
-
+    id 'org.jetbrains.compose' version '1.0.0-rc3'
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
+
 }
 
 repositories {
@@ -20,17 +21,17 @@ repositories {
 }
 
 dependencies {
-    // Use the Kotlin JUnit 5 integration.
-    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit5'
+    implementation 'org.jetbrains.compose.foundation:foundation-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.foundation:foundation-layout-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.material:material-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.runtime:runtime-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.ui:ui-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.ui:ui-graphics-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.ui:ui-text-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.compose.ui:ui-unit-desktop:1.1.0-alpha04'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0'
 
-    // Use the JUnit 5 integration.
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
-
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
-
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:31.1-jre'
+    implementation project(':state')
 }
 
 tasks.named('test') {
