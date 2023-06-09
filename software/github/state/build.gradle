@@ -23,11 +23,7 @@ repositories {
 }
 
 dependencies {
-    // Use the Kotlin JUnit 5 integration.
     testImplementation 'junit:junit:4.12'
-
-    // Use the JUnit 5 integration.
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
@@ -41,9 +37,4 @@ dependencies {
     implementation 'org.jetbrains.compose.runtime:runtime-desktop:1.1.0-alpha04'
 
     implementation 'com.vaticle.typedb:typedb-client:2.14.0'
-}
-
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
 }
