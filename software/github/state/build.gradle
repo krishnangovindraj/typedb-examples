@@ -17,11 +17,14 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven {
+        url 'https://repo.vaticle.com/repository/maven/'
+    }
 }
 
 dependencies {
     // Use the Kotlin JUnit 5 integration.
-    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit5'
+    testImplementation 'junit:junit:4.12'
 
     // Use the JUnit 5 integration.
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
@@ -31,6 +34,13 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:31.1-jre'
+
+    // These are our dependencies
+    implementation 'com.eclipsesource.minimal-json:minimal-json:0.9.5'
+    implementation 'org.kohsuke:github-api:1.101'
+    implementation 'org.jetbrains.compose.runtime:runtime-desktop:1.1.0-alpha04'
+
+    implementation 'com.vaticle.typedb:typedb-client:2.14.0'
 }
 
 tasks.named('test') {

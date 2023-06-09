@@ -21,6 +21,9 @@
 
 package com.vaticle.typedb.example.software.github.tests
 
+import com.vaticle.typedb.example.software.github.state.Explorer
+import com.vaticle.typedb.example.software.github.state.Migrator
+
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.BeforeClass
