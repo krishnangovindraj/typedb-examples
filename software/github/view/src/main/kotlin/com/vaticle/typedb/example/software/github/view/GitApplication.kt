@@ -21,10 +21,6 @@
 
 package com.vaticle.typedb.example.software.github.view
 
-import com.vaticle.typedb.example.software.github.state.Downloader
-import com.vaticle.typedb.example.software.github.state.GlobalState
-import com.vaticle.typedb.example.software.github.state.Migrator
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
