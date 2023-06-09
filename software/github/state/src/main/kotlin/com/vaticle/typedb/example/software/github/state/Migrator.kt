@@ -115,7 +115,7 @@ class Migrator {
     }
 
     companion object {
-        private var SCHEMA_PATH_STRING = "software/github/schemas/github-schema.tql"
+        private var SCHEMA_PATH_STRING = "../schemas/github-schema.tql"
         private const val DB_NAME = "github"
         private const val DB_URI = "localhost:1729"
     }

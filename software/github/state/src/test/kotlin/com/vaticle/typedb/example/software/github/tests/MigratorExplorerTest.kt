@@ -89,7 +89,7 @@ class MigratorExplorerTest {
         @BeforeClass
         @JvmStatic
         fun setupForExplorer() {
-            Migrator().migrate("software/github/datasets/typedb.json")
+            Migrator().migrate("../datasets/typedb.json")
         }
     }
 }
